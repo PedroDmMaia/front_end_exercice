@@ -3,7 +3,18 @@
     padding: 0;
     margin: 0;
     font-family: 'Hanken Grotesk', sans-serif;
+    list-style: none;
 }
+
+:root {
+--circle-gradient: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+--gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+--back-main: hsl(0, 0%, 100%);
+--big-title: hsl(221, 100%, 96%);
+--paragraf-color: hsl(241, 100%, 89%);
+--back-button: hsl(224, 30%, 27%);
+}
+
 
 body {
     background-color: aliceblue;
@@ -24,7 +35,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    background-image: var(--gradient);
     padding: 2em 2.5em;
     border-radius: 20px;
     display: flex;
@@ -33,11 +44,15 @@ header {
     justify-content: space-around;
 }
 
+header h2 {
+    color: var(--paragraf-color);
+}
+
 .score {
     width: 11em;
     height: 11em;
     margin: 0 auto;
-    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    background-image: var(--circle-gradient);
     border-radius: 50%;
 }
 
@@ -55,28 +70,79 @@ header > p {
 }
 
 main {
-    padding: 2em 2.5em;
+    padding: 2rem 2.1rem;
 }
 
 main h2 {
-    display: flex;
+    text-align: left;
+    padding-top: 0.4em;
 }
 
-.itens ul li {
-    list-style: none;
+.title {
+    display: flex;
+    background-color: none;
+}
+.itens ul {
+    margin-top: 2em;
+    width: 100%;
+}
+
+.itens ul li { 
     display: flex;
     align-items: center;
-    padding: 1em;
-    margin-bottom: 0.8em;
-    background-color: rgb(255, 174, 174);
+    margin-top: 0.8em;
     border-radius: 5px;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
-.itens ul li p {
-    text-align: left;
+.title img {
+    margin-right: 10%;
 }
 
 
+#reaction {
+    background-color: hsla(0, 100%, 67%, 30%);
+}
 
+#reaction .title {
+    color: hsl(0, 100%, 67%);
+}
 
+#memory {
+    background-color: hsla(39, 100%, 56%, 30%);
+}
 
+#memory .title{
+    color: hsl(39, 100%, 56%);
+}
+
+#verbal {
+    background-color: hsla(166, 100%, 37%, 30%);
+}
+
+#verbal .title{
+    color: hsl(166, 100%, 37%);
+}
+
+#visual {
+    background-color: hsla(234, 85%, 45%, 30%);
+}
+
+#visual .title{
+    color: hsl(234, 85%, 45%);
+}
+
+button {
+    background-color: var(--back-button);
+    color: #fff;
+    width: 99%;
+    margin-top: 2rem;
+    padding: 0.8rem 0;
+    border-radius: 30px;
+    border: none;
+}
+
+button:hover {
+    background-image: var(--gradient);
+}

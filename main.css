@@ -15,11 +15,6 @@
 --back-button: hsl(224, 30%, 27%);
 }
 
-
-body {
-    background-color: aliceblue;
-}
-
 .container {
     margin: 0 auto;
     display: grid;
@@ -35,6 +30,7 @@ body {
 }
 
 header {
+    width: 100%;
     background-image: var(--gradient);
     padding: 2em 2.5em;
     border-radius: 20px;
@@ -52,7 +48,7 @@ header h2 {
     width: 11em;
     height: 11em;
     margin: 0 auto;
-    background-image: var(--circle-gradient);
+    background: var(--circle-gradient);
     border-radius: 50%;
 }
 
@@ -145,4 +141,43 @@ button {
 
 button:hover {
     background-image: var(--gradient);
+}
+
+@media screen and (max-width: 1352px){
+    body{
+        background-color: none;
+    }
+    
+    .container {
+        display: block;
+        max-width: 100%;
+        margin-top: 0;
+        box-shadow: none;
+    }
+
+    header {
+        border-radius: 0 0 20px 20px;
+    }
+
+    button {
+        padding: 1rem;
+        width: 90%;
+        margin-top: 3rem;
+    }
+
+    .score,
+    header h2,
+    header p {
+        margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 1353px){
+    body {
+        background-color: aliceblue;
+    }
 }
